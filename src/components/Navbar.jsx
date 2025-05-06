@@ -40,6 +40,7 @@ const Navbar = () => {
       <div className="hidden lg:flex space-x-4">
         <Link to="/" className="hover:underline">Home</Link>
         <Link to="/profile" className="hover:underline">My Profile</Link>
+       
       </div>
 
       <div className="hidden lg:flex items-center space-x-4">

@@ -1,0 +1,96 @@
+[
+    {
+      "id": "event_001",
+      "name": "Tech Innovators Conference 2025",
+      "thumbnail": "https://i.ibb.co.com/h12HBrj1/images.jpg",
+      "category": "Technology",
+      "date": "2025-05-15",
+      "location": "Dhaka Convention Center, Dhaka",
+      "entry_fee": 500,
+      "description": "An exclusive gathering of tech leaders and innovators from across the globe."
+    },
+    {
+      "id": "event_002",
+      "name": "AI Revolution Summit",
+      "thumbnail": "https://i.ibb.co.com/j9hGh4jQ/images-1.jpg",
+      "category": "Artificial Intelligence",
+      "date": "2025-06-01",
+      "location": "Bangladesh National Museum, Dhaka",
+      "entry_fee": 700,
+      "description": "A summit on the latest advancements in AI technology and its future impact."
+    },
+    {
+      "id": "event_003",
+      "name": "Digital Marketing Expo",
+      "thumbnail": "https://i.ibb.co.com/V01VBks1/images-2.jpg",
+      "category": "Marketing",
+      "date": "2025-07-10",
+      "location": "International Convention City, Dhaka",
+      "entry_fee": 400,
+      "description": "A comprehensive digital marketing expo with workshops and expert talks."
+    },
+    {
+      "id": "event_004",
+      "name": "Blockchain Technology Forum",
+      "thumbnail": "https://i.ibb.co.com/8nzXXbB1/images-3.jpg",
+      "category": "Blockchain",
+      "date": "2025-08-20",
+      "location": "Bangabandhu International Conference Center, Dhaka",
+      "entry_fee": 600,
+      "description": "Discussing the future of blockchain and its potential applications in various industries."
+    },
+    {
+      "id": "event_005",
+      "name": "Smart Cities Summit 2025",
+      "thumbnail": "https://i.ibb.co.com/QvPfQvyZ/images-4.jpg",
+      "category": "Urban Development",
+      "date": "2025-09-15",
+      "location": "Dhaka International Trade Fair Complex",
+      "entry_fee": 800,
+      "description": "A summit on smart cities focusing on technology-driven urban solutions."
+    },
+    {
+      "id": "event_006",
+      "name": "Cybersecurity Conference",
+      "thumbnail": "https://i.ibb.co.com/Q76zbrWQ/images-5.jpg",
+      "category": "Cybersecurity",
+      "date": "2025-10-05",
+      "location": "Radisson Blu Dhaka Water Garden",
+      "entry_fee": 550,
+      "description": "Insights on cybersecurity trends, risk management, and best practices."
+    },
+    {
+      "id": "event_007",
+      "name": "Green Tech Expo 2025",
+      "thumbnail": "https://i.ibb.co.com/j9ydVKgB/images-6.jpg",
+      "category": "Sustainability",
+      "date": "2025-11-03",
+      "location": "Bangladesh Science and Technology Complex",
+      "entry_fee": 450,
+      "description": "A showcase of green technologies and sustainable innovations."
+    },
+    {
+      "id": "event_008",
+      "name": "5G Technology Conference",
+      "thumbnail": "https://i.ibb.co.com/tT8fYy32/images-7.jpg",
+      "category": "Telecommunications",
+      "date": "2025-12-10",
+      "location": "Grand Ballroom, Dhaka",
+      "entry_fee": 650,
+      "description": "Exploring the future of 5G technology and its impact on the global communication infrastructure."
+    },
+    {
+        "id": "event_009",
+        "name": "Quantum Computing Symposium",
+        "thumbnail": "https://i.ibb.co.com/9mrMLX4C/images-8.jpg",
+        "category": "Quantum Computing",
+        "date": "2026-01-20",
+        "location": "Sheraton Dhaka",
+        "entry_fee": 750,
+        "description": "An in-depth symposium discussing the future of quantum computing and its potential applications."
+      }      
+  ]
+
+
+
+

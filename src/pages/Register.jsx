@@ -2,15 +2,15 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebase.init";
-import { FaEye, FaEyeSlash } from "react-icons/fa"; // React Icons
-import { useNavigate } from "react-router-dom"; // Import useNavigate hook
+import { FaEye, FaEyeSlash } from "react-icons/fa"; 
+import { useNavigate } from "react-router-dom"; 
 
 const Register = () => {
   const [formData, setFormData] = useState({ name: "", email: "", photoURL: "", password: "" });
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,16 +32,15 @@ const Register = () => {
       await updateProfile(userCredential.user, { displayName: formData.name, photoURL: formData.photoURL });
 
       setSuccessMessage("Successfully registered! Please log in.");
-      setError(""); // Clear any previous error message
-      setFormData({ name: "", email: "", photoURL: "", password: "" }); // Clear form after success
+      setError(""); 
+      setFormData({ name: "", email: "", photoURL: "", password: "" }); 
 
-      // Redirect to login page
       setTimeout(() => {
         navigate("/login");
-      }, 2000); // Adding a slight delay to show the success message before redirecting
+      }, 2000); 
     } catch (err) {
       setError("Registration failed. Please try again.");
-      setSuccessMessage(""); // Clear any previous success message
+      setSuccessMessage(""); 
     }
   };
 
