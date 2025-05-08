@@ -1,8 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const EventDetails = () => {
+  useDocumentTitle('Event Details | Event Explorer');
   const { id } = useParams();
   const [event, setEvent] = useState(null);
   const [name, setName] = useState('');

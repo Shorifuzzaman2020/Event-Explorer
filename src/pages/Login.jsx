@@ -6,8 +6,10 @@ import { auth, googleProvider } from "../firebase.init";
 import { useUser } from "../UserContext";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const Login = () => {
+  useDocumentTitle('Login | Event Explorer');
   const navigate = useNavigate();
   const { setUser, setIsLoggedIn } = useUser();  
   const [formData, setFormData] = useState({ email: "", password: "" });

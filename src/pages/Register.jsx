@@ -5,8 +5,10 @@ import { auth } from "../firebase.init";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../UserContext";  
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const Register = () => {
+  useDocumentTitle('Register | Event Explorer');
   const { setIsLoggedIn } = useUser();  
   const [formData, setFormData] = useState({ name: "", email: "", photoURL: "", password: "" });
   const [error, setError] = useState("");

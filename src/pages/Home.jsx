@@ -7,8 +7,10 @@ import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const Home = () => {
+    useDocumentTitle('Home | Event Explorer');
     const [events, setEvents] = useState([]);
 
     useEffect(() => {

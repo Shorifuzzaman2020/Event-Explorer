@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { auth } from '../firebase.init'; 
 import { updateProfile } from 'firebase/auth';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const Profile = () => {
+  useDocumentTitle('Profile | Event Explorer');
   const [userInfo, setUserInfo] = useState({ name: '', photoURL: '', email: '' });
   const [newName, setNewName] = useState('');
   const [newPhotoURL, setNewPhotoURL] = useState('');
