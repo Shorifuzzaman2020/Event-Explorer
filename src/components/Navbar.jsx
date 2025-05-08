@@ -7,14 +7,14 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { user, setUser } = useUser(); 
+  const { user, setUser } = useUser();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleLogout = async () => {
     try {
       await auth.signOut();
       setUser(null); 
-      navigate("/login"); 
+      navigate("/login");
     } catch (err) {
       console.log("Error signing out: ", err.message);
     }
@@ -26,7 +26,6 @@ const Navbar = () => {
 
   return (
     <nav className="bg-blue-600 text-white p-4 flex items-center justify-between">
-
       <div className="text-xl font-bold">
         <Link to="/">Event Explorer</Link>
       </div>
@@ -40,7 +39,6 @@ const Navbar = () => {
       <div className="hidden lg:flex space-x-4">
         <Link to="/" className="hover:underline">Home</Link>
         <Link to="/profile" className="hover:underline">My Profile</Link>
-       
       </div>
 
       <div className="hidden lg:flex items-center space-x-4">
@@ -60,7 +58,6 @@ const Navbar = () => {
             </button>
           </div>
         ) : (
-         
           <Link
             to="/login"
             className="bg-white text-black p-2 rounded hover:bg-blue-700"
@@ -70,7 +67,6 @@ const Navbar = () => {
         )}
       </div>
 
-    
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-16 left-0 w-full bg-blue-600 text-white p-4">
           <div className="space-y-4">
@@ -97,6 +93,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
-

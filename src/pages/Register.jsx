@@ -2,15 +2,17 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebase.init";
-import { FaEye, FaEyeSlash } from "react-icons/fa"; 
-import { useNavigate } from "react-router-dom"; 
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { useUser } from "../UserContext";  
 
 const Register = () => {
+  const { setIsLoggedIn } = useUser();  
   const [formData, setFormData] = useState({ name: "", email: "", photoURL: "", password: "" });
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,11 +35,13 @@ const Register = () => {
 
       setSuccessMessage("Successfully registered! Please log in.");
       setError(""); 
-      setFormData({ name: "", email: "", photoURL: "", password: "" }); 
+      setFormData({ name: "", email: "", photoURL: "", password: "" });
+
+      setIsLoggedIn(false);
 
       setTimeout(() => {
-        navigate("/login");
-      }, 2000); 
+        navigate("/login"); 
+      }, 2000);
     } catch (err) {
       setError("Registration failed. Please try again.");
       setSuccessMessage(""); 
@@ -103,3 +107,4 @@ const Register = () => {
 
 export default Register;
 
+// //WORKING CODE

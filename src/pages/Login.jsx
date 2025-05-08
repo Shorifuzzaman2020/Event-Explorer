@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
@@ -8,7 +9,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { setUser } = useUser();
+  const { setUser, setIsLoggedIn } = useUser();  
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -20,13 +21,14 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        formData.email,
-        formData.password
-      );
+      const userCredential = await signInWithEmailAndPassword(auth, formData.email, formData.password);
       const user = userCredential.user;
+
+      
       setUser(user);
+      setIsLoggedIn(true); 
+
+      
       navigate("/profile");
     } catch (err) {
       setError("Invalid email or password.");
@@ -38,6 +40,7 @@ const Login = () => {
       const userCredential = await signInWithPopup(auth, googleProvider);
       const user = userCredential.user;
       setUser(user);
+      setIsLoggedIn(true); 
       navigate("/profile");
     } catch (err) {
       setError("Google login failed.");
@@ -55,6 +58,7 @@ const Login = () => {
             name="email"
             placeholder="Email"
             onChange={handleChange}
+            value={formData.email}
             className="w-full p-2 border rounded"
             required
           />
@@ -64,6 +68,7 @@ const Login = () => {
               name="password"
               placeholder="Password"
               onChange={handleChange}
+              value={formData.password}
               className="w-full p-2 border rounded"
               required
             />

@@ -89,3 +89,4 @@ const EventDetails = () => {
 };
 
 export default EventDetails;
+//WORKING CODE
