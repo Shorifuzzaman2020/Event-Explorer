@@ -1,17 +1,16 @@
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase.init";
 import { useUser } from "../UserContext";
-import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const Login = () => {
   useDocumentTitle('Login | Event Explorer');
   const navigate = useNavigate();
-  const { setUser, setIsLoggedIn } = useUser();  
+  const { setUser, setIsLoggedIn } = useUser();
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -25,12 +24,8 @@ const Login = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, formData.email, formData.password);
       const user = userCredential.user;
-
-      
       setUser(user);
-      setIsLoggedIn(true); 
-
-      
+      setIsLoggedIn(true);
       navigate("/profile");
     } catch (err) {
       setError("Invalid email or password.");
@@ -42,7 +37,7 @@ const Login = () => {
       const userCredential = await signInWithPopup(auth, googleProvider);
       const user = userCredential.user;
       setUser(user);
-      setIsLoggedIn(true); 
+      setIsLoggedIn(true);
       navigate("/profile");
     } catch (err) {
       setError("Google login failed.");
@@ -81,6 +76,11 @@ const Login = () => {
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </span>
           </div>
+          <div className="text-right">
+            <Link to="/forgot-password" className="text-sm text-blue-600 hover:underline">
+              Forgot Password?
+            </Link>
+          </div>
           <button
             type="submit"
             className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-700"
@@ -97,10 +97,7 @@ const Login = () => {
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">
             Don't have an account?{" "}
-            <Link
-              to="/register"
-              className="text-blue-600 hover:underline"
-            >
+            <Link to="/register" className="text-blue-600 hover:underline">
               Register here
             </Link>
           </p>

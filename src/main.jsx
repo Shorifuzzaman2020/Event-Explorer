@@ -14,6 +14,7 @@ import Register from './pages/Register.jsx';
 import ProtectedRoute from './pages/ProtectedRoute.jsx';
 import Profile from './pages/Profile.jsx';
 import EventDetails from './pages/EventDetails.jsx';
+import ForgotPassword from './pages/ForgetPassword.jsx';
 
 
 const router = createBrowserRouter([
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ), 
       },
+      {
+        path: 'forgot-password',
+        element: <ForgotPassword/>
+      },
+      
     ],
   },
 ]);
