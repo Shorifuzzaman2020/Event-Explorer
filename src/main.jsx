@@ -16,6 +16,7 @@ import Profile from './pages/Profile.jsx';
 import EventDetails from './pages/EventDetails.jsx';
 import ForgotPassword from './pages/ForgetPassword.jsx';
 import MyEvents from './pages/MyEvents.jsx';
+import NotFound from './pages/NotFound.jsx';
 
 
 const router = createBrowserRouter([
@@ -63,8 +64,13 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
+      
 
     ],
+  },
+  {
+    path: '*',
+    element: <NotFound/>,
   },
 ]);
 
