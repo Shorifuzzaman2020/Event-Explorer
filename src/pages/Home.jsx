@@ -22,7 +22,7 @@ const Home = () => {
 
     return (
         <div className="bg-gray-50 w-11/12 mx-auto mt-3">
-            <section className="slider-section mb-10">
+            <section className="slider-section mb-10 relative">
                 <Swiper
                     spaceBetween={50}
                     slidesPerView={1}
@@ -34,9 +34,9 @@ const Home = () => {
                     modules={[Navigation, Pagination, Keyboard]}
                 >
                     <SwiperSlide>
-                        <div className='pt-20 px-40 pb-24 bg-blue-300 text-center rounded-lg'>
+                        <div className='pt-20 px-3 pb-12 lg:px-40 lg:pb-24 bg-blue-300 text-center rounded-lg'>
                             <h1 className='text-4xl font-bold mb-10'>Tech Innovation Summit 2025: Shaping the Future</h1>
-                            <p className='mt-3 mb-4'>The Tech Innovation Summit is a premier gathering of visionaries, industry leaders, and innovators, focused on the latest advancements in technology. From AI breakthroughs to sustainable tech solutions, this summit fosters collaboration and drives transformative ideas that shape the future of industries worldwide.</p>
+                            <p className='mt-3 mb-6'>The Tech Innovation Summit is a premier gathering of visionaries, industry leaders, and innovators, focused on the latest advancements in technology. From AI breakthroughs to sustainable tech solutions, this summit fosters collaboration and drives transformative ideas that shape the future of industries worldwide.</p>
                             <p className="text-2xl font-bold text-yellow-800 overflow-hidden whitespace-nowrap">
                                 <span className="animate-marquee">
                                     Join the events and increase your skill
@@ -62,7 +62,7 @@ const Home = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='pt-20 px-40 pb-24 bg-gray-400 text-center rounded-lg'>
+                        <div className='pt-20 px-3 pb-5 lg:px-40 lg:pb-24 bg-gray-400 text-center rounded-lg'>
                             <h1 className='text-4xl font-bold mb-10'>AI Summit 2025: Unlocking the Power of Artificial Intelligence</h1>
                             <p className='mt-3 mb-4'>The AI Summit is a global platform where pioneers, experts, and business leaders converge to explore the transformative impact of artificial intelligence. From cutting-edge innovations to ethical discussions, this summit showcases breakthroughs in AI technology, shaping the future of industries and society.</p>
                             <p className="text-2xl font-bold text-yellow-800 overflow-hidden whitespace-nowrap">
@@ -90,7 +90,7 @@ const Home = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='pt-20 px-40 pb-24 bg-green-200 text-center rounded-lg'>
+                        <div className='pt-20 px-3 pb-5 lg:px-40 lg:pb-24 bg-green-200 text-center rounded-lg'>
                             <h1 className='text-4xl font-bold mb-10'>Blockchain Technology Forum 2025: Decentralizing the Future</h1>
                             <p className='mt-3 mb-4'>The Blockchain Technology Forum brings together experts, developers, and industry leaders to explore the latest advancements in decentralized solutions. From finance to supply chains, this forum showcases how blockchain is revolutionizing industries, enhancing security, and fostering transparency in the digital era.</p>
                             <p className="text-2xl font-bold text-yellow-800 overflow-hidden whitespace-nowrap">
