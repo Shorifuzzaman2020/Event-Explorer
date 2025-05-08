@@ -7,7 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router';
-import RootWrapper from './components/Root'; 
+import RootWrapper from './components/Root';
 import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
@@ -15,20 +15,21 @@ import ProtectedRoute from './pages/ProtectedRoute.jsx';
 import Profile from './pages/Profile.jsx';
 import EventDetails from './pages/EventDetails.jsx';
 import ForgotPassword from './pages/ForgetPassword.jsx';
+import MyEvents from './pages/MyEvents.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootWrapper />, 
+    element: <RootWrapper />,
     children: [
       {
         index: true,
-        element: <Home /> 
+        element: <Home />
       },
       {
         path: 'login',
-        element: <Login /> 
+        element: <Login />
       },
       {
         path: 'register',
@@ -48,13 +49,21 @@ const router = createBrowserRouter([
           <ProtectedRoute>
             <EventDetails />
           </ProtectedRoute>
-        ), 
+        ),
       },
       {
         path: 'forgot-password',
-        element: <ForgotPassword/>
+        element: <ForgotPassword />
       },
-      
+      {
+        path: 'myevent',
+        element: (
+          <ProtectedRoute>
+            <MyEvents />
+          </ProtectedRoute>
+        ),
+      },
+
     ],
   },
 ]);

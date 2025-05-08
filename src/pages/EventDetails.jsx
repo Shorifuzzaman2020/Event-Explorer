@@ -33,6 +33,16 @@ const EventDetails = () => {
 
     setErrorMessage('');
     toast.success('Your seat has been successfully reserved!');
+
+    const reservation = {
+      ...event,
+      reservedBy: { name, email },
+      reservedAt: new Date().toISOString(),
+    };
+
+    const storedReservations = JSON.parse(localStorage.getItem('myEvents')) || [];
+    localStorage.setItem('myEvents', JSON.stringify([...storedReservations, reservation]));
+
     setName('');
     setEmail('');
   };
