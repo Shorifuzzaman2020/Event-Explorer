@@ -1,12 +1,64 @@
-# React + Vite
+# Event Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Event Explorer Screenshot](https://i.ibb.co.com/YT0YCcqN/Screenshot-2025-08-08-185633.jpg)  
+*(Replace this with an actual screenshot of your app)*
 
-Currently, two official plugins are available:
+## Project Overview  
+Event Explorer is a responsive React application that enables users to browse, explore, and manage tech-related events such as tech summits, AI forums, and blockchain conferences. It features Firebase authentication (email/password and Google sign-in), user profiles, and interactive event sliders powered by Swiper.js. User authentication state is managed globally via React Context, and smooth navigation is handled by React Router DOM.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo  
+[Live Project Link](https://your-event-explorer.netlify.app)  
+*(Replace with your deployed URL)*
 
-## Expanding the ESLint configuration
+## Technologies Used  
+- React.js (Hooks & Context API)  
+- Firebase Authentication (Email/Password & Google OAuth)  
+- React Router DOM  
+- Tailwind CSS  
+- Swiper.js  
+- React Icons  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Core Features  
+- User registration and login with Firebase Authentication  
+- Google OAuth sign-in support  
+- Persistent user authentication state management with React Context  
+- Interactive and responsive event carousel using Swiper.js  
+- Responsive design with Tailwind CSS  
+- User profile and personalized event management  
+- Navigation with React Router DOM  
+- Mobile-friendly navbar with toggle menu  
+
+## Dependencies  
+- react  
+- react-dom  
+- react-router-dom  
+- firebase  
+- swiper  
+- tailwindcss  
+- react-icons  
+
+## Getting Started - Local Setup  
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/your-username/event-explorer.git
+   cd event-explorer
+2. **Install dependencies**
+3. **Configure Firebase**
+
+Create a Firebase project at Firebase Console
+
+Enable Email/Password and Google Authentication
+
+Replace your Firebase config details in firebase.init.js
+
+4. **Start the application**
+- npm start
+5. Open your browser and visit http://localhost:3000
+
+✔️✔️Additional Resources
+- Firebase Authentication Docs
+
+- React Router Documentation
+
+- Swiper.js React Docs
