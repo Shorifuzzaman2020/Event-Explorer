@@ -7,8 +7,8 @@
 Event Explorer is a responsive React application that enables users to browse, explore, and manage tech-related events such as tech summits, AI forums, and blockchain conferences. It features Firebase authentication (email/password and Google sign-in), user profiles, and interactive event sliders powered by Swiper.js. User authentication state is managed globally via React Context, and smooth navigation is handled by React Router DOM.
 
 ## Live Demo  
-[Live Project Link](https://your-event-explorer.netlify.app)  
-*(Replace with your deployed URL)*
+[Live Project Link](https://event-discovery-project.web.app/)  
+
 
 ## Technologies Used  
 - React.js (Hooks & Context API)  
